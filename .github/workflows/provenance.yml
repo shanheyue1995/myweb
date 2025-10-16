@@ -12,4 +12,4 @@ name: Static HTML Site Provenance
        - name: Attest Build Provenance
          uses: actions/attest-build-provenance@v3.0.0
          with:
-           subject-path: "myweb/index.html" # 匹配实际的HTML文件路径
+           subject-path: "myweb/index.html"
