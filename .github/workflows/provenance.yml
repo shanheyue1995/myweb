@@ -15,4 +15,4 @@ jobs:
       - name: Attest Build Provenance
         uses: actions/attest-build-provenance@v3.0.0
         with:
-          subject-path: "/index.html"
+          subject-path: "./index.html"
