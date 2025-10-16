@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 确保在手机上正常显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山河月的个人网站</title>
+    <!-- 引入基础样式库 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入图标库 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/mywbe/favicon.ico" type="image/x-icon">
+    <!-- 简单的样式配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // 这里可以修改成你喜欢的颜色
+                        primary: '#5B86E5', // 主色调：蓝色
+                        secondary: '#36D399', // 辅助色：绿色
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 平滑滚动效果 */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0">
+        <div class="container mx-auto px-4 py-3">
+            <!-- 网站标题 -->
+            <div class="text-center md:flex md:justify-between md:items-center">
+                <a href="#home" class="text-xl font-bold text-primary">我的网站</a>
+
+                <!-- 导航链接 - 手机上隐藏，电脑上显示 -->
+                <div class="hidden md:flex space-x-6 mt-2 md:mt-0">
+                    <a href="#home" class="hover:text-primary">首页</a>
+                    <a href="#about" class="hover:text-primary">关于我</a>
+                    <a href="#hobby" class="hover:text-primary">我的爱好</a>
+                    <a href="#contact" class="hover:text-primary">联系我</a>
+                </div>
+            </div>
+
+            <!-- 手机导航按钮 -->
+            <div class="md:hidden text-center mt-2">
+                <button id="menuBtn" class="text-gray-700">
+                    <i class="fa fa-bars"></i> 菜单
+                </button>
+            </div>
+
+            <!-- 手机导航菜单 - 默认隐藏 -->
+            <div id="mobileMenu" class="hidden md:hidden text-center py-2 space-y-2">
+                <a href="#home" class="block hover:text-primary">首页</a>
+                <a href="#about" class="block hover:text-primary">关于我</a>
+                <a href="#hobby" class="block hover:text-primary">我的爱好</a>
+                <a href="#contact" class="block hover:text-primary">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-primary/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <!-- 头像 -->
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-md">
+                    <!-- 替换成你的照片：把下面的链接换成你的照片地址 -->
+                    <img src="/myweb/QQ图片20250923105358.jpg" alt="我的照片" class="w-full h-full object-cover">
+                </div>
+
+                <!-- 个人介绍 -->
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">你好，我是<span class="text-primary">山河月</span></h1>
+                <p class="text-gray-600 max-w-md mx-auto">
+                    我是一个网站搭建的爱好者，这是我的个人网页，我希望通过我的努力能掌握更多的知识！
+                </p>
+
+                <!-- 按钮 -->
+                <a href="#about"
+                    class="inline-block mt-8 bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90">
+                    了解更多
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-10">关于我</h2>
+
+            <div class="max-w-2xl mx-auto">
+                <p class="mb-4">
+                    我是<b>山河月</b>，一个网页制作的学习者，正在利用自己的空闲时间学习网页制作的相关知识。
+                    目前正在学习HTML和CSS的基础知识。下一步我会继续学习JavaScript的知识，让网页变得更加漂亮美观！
+                </p>
+                <p class="mb-4">
+                    这个网站是我学习了UP主<a href="https://kangwenchang.com/"><b>康文昌</b></a>的视频后，在网页模板的基础上制作的。
+                </p>
+                <p>
+                    我的学习目标是：能够独立制作简单的静态网页，
+                    学习JavaScript，实现更多交互功能。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我的爱好 -->
+    <section id="hobby" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-10">我的爱好</h2>
+
+            <!-- 爱好列表 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- 爱好1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-secondary text-3xl mb-3">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">阅读</h3>
+                    <p>喜欢读网络相关的内容</p>
+                </div>
+
+                <!-- 爱好2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-secondary text-3xl mb-3">
+                        <i class="fa fa-gamepad"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">游戏</h3>
+                    <p>偶尔玩一些益智类游戏放松心情</p>
+                </div>
+
+                <!-- 爱好3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-secondary text-3xl mb-3">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">编程</h3>
+                    <p>学习制作网页和编写简单的程序</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-10">联系我</h2>
+
+            <div class="max-w-2xl mx-auto">
+                <!-- 联系方式 -->
+                <div class="mb-10 text-center space-y-4">
+                    <p><i class="fa fa-envelope text-primary mr-2"></i> 邮箱：1416441912@qq.com</p>
+                    <p><i class="fa fa-weixin text-primary mr-2"></i> 微信：bxh18306586259</p>
+                    <p><i class="fa fa-github text-primary mr-2"></i> GitHub：github.com/shanheyue1995</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 我的个人网站 | 山河月的练习作品</p>
+        </div>
+    </footer>
+
+    <!-- 简单的交互脚本 -->
+    <script>
+        // 手机菜单切换
+        document.getElementById('menuBtn').addEventListener('click', function () {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // 表单提交处理
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // 阻止默认提交
+
+            // 获取输入内容
+            const name = document.getElementById('name').value;
+            const msg = document.getElementById('msg').value;
+
+            // 简单验证
+            if (!name || !msg) {
+                alert('请填写你的名字和想对我说的话');
+                return;
+            }
+
+            // 提交成功提示
+            alert('消息发送成功！谢谢你的留言，我会尽快回复~');
+            this.reset(); // 清空表单
+        });
+    </script>
+</body>
+
+</html>
