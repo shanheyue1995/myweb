@@ -1,0 +1,17 @@
+name: Static HTML Site Provenance
+ on: [push, pull_request]
+ jobs:
+   attest-provenance:
+     runs-on: ubuntu-latest
+     permissions:
+       id-token: write
+       contents: read
+     steps:
+       - name: Checkout code
+         uses: actions/checkout@v4
+       # 纯静态站点无需构建步骤，直接指定静态文件目录
+       - name: Attest Build Provenance
+         uses: actions/attest-build-provenance@v3.0.0
+         with:
+           subject-path: "myweb/index.html" # 匹配所有HTML文件
+           # 若静态文件在特定目录（如docs），则改为："docs/**/*"
